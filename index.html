@@ -23,13 +23,10 @@
             --daou: #4A90D9;
             --hiworks: #00B894;
             --jandi: #7C4DFF;
+            --kt: #E74C3C;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
@@ -39,7 +36,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* ===== HERO ===== */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #0D2137 50%, #1a3a5c 100%);
             color: white;
@@ -47,37 +44,21 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(232,131,58,0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(124,77,255,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
         .hero-inner {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 40px;
             position: relative;
             z-index: 1;
         }
-
         .hero-badge {
             display: inline-block;
             background: rgba(232,131,58,0.2);
@@ -90,7 +71,6 @@
             margin-bottom: 20px;
             border: 1px solid rgba(232,131,58,0.3);
         }
-
         .hero h1 {
             font-size: 42px;
             font-weight: 900;
@@ -98,28 +78,24 @@
             margin-bottom: 16px;
             letter-spacing: -1px;
         }
-
         .hero h1 span {
             background: linear-gradient(135deg, var(--accent), var(--accent-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .hero-sub {
             font-size: 18px;
             color: rgba(255,255,255,0.7);
-            max-width: 600px;
+            max-width: 650px;
             line-height: 1.8;
         }
-
         .hero-meta {
             margin-top: 30px;
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
         }
-
         .hero-meta-item {
             display: flex;
             align-items: center;
@@ -127,14 +103,9 @@
             font-size: 14px;
             color: rgba(255,255,255,0.6);
         }
+        .hero-meta-item svg { width: 16px; height: 16px; fill: var(--accent); }
 
-        .hero-meta-item svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--accent);
-        }
-
-        /* ===== NAVIGATION ===== */
+        /* ===== NAV ===== */
         .nav-bar {
             background: white;
             border-bottom: 1px solid var(--border);
@@ -143,19 +114,17 @@
             z-index: 100;
             box-shadow: 0 2px 20px rgba(0,0,0,0.06);
         }
-
         .nav-inner {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 40px;
             display: flex;
             gap: 4px;
             overflow-x: auto;
         }
-
         .nav-inner a {
-            padding: 16px 20px;
-            font-size: 14px;
+            padding: 16px 18px;
+            font-size: 13.5px;
             font-weight: 500;
             color: var(--text-light);
             text-decoration: none;
@@ -163,7 +132,6 @@
             border-bottom: 3px solid transparent;
             transition: all 0.2s;
         }
-
         .nav-inner a:hover, .nav-inner a.active {
             color: var(--primary);
             border-bottom-color: var(--accent);
@@ -171,26 +139,19 @@
 
         /* ===== CONTAINER ===== */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 40px;
         }
 
         /* ===== SECTIONS ===== */
-        .section {
-            padding: 70px 0;
-        }
-
-        .section-header {
-            margin-bottom: 48px;
-        }
-
+        .section { padding: 70px 0; }
+        .section-header { margin-bottom: 48px; }
         .section-num {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             border-radius: 10px;
             text-align: center;
             line-height: 36px;
@@ -198,7 +159,6 @@
             font-weight: 700;
             margin-bottom: 12px;
         }
-
         .section-title {
             font-size: 32px;
             font-weight: 800;
@@ -206,13 +166,11 @@
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
-
         .section-desc {
             font-size: 16px;
             color: var(--text-light);
             max-width: 700px;
         }
-
         .divider {
             border: none;
             height: 1px;
@@ -228,7 +186,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             transition: transform 0.2s, box-shadow 0.2s;
         }
-
         .card:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
@@ -240,7 +197,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
-
         .problem-card {
             background: white;
             border-radius: 16px;
@@ -249,17 +205,13 @@
             border-top: 1px solid var(--border);
             border-right: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            position: relative;
         }
-
         .problem-card:nth-child(1) { border-left-color: #E74C3C; }
         .problem-card:nth-child(2) { border-left-color: #F39C12; }
         .problem-card:nth-child(3) { border-left-color: #9B59B6; }
         .problem-card:nth-child(4) { border-left-color: #3498DB; }
-
         .problem-icon {
-            width: 48px;
-            height: 48px;
+            width: 48px; height: 48px;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -267,32 +219,16 @@
             font-size: 24px;
             margin-bottom: 16px;
         }
-
         .problem-card:nth-child(1) .problem-icon { background: rgba(231,76,60,0.1); }
         .problem-card:nth-child(2) .problem-icon { background: rgba(243,156,18,0.1); }
         .problem-card:nth-child(3) .problem-icon { background: rgba(155,89,182,0.1); }
         .problem-card:nth-child(4) .problem-icon { background: rgba(52,152,219,0.1); }
-
-        .problem-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .problem-card p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
+        .problem-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--primary); }
+        .problem-card p { font-size: 14px; color: var(--text-light); line-height: 1.8; }
         .problem-card .impact {
-            margin-top: 14px;
-            padding-top: 14px;
+            margin-top: 14px; padding-top: 14px;
             border-top: 1px dashed var(--border);
-            font-size: 13px;
-            color: var(--danger);
-            font-weight: 500;
+            font-size: 13px; color: var(--danger); font-weight: 500;
         }
 
         /* ===== 3 PILLAR ===== */
@@ -301,7 +237,6 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
-
         .pillar-card {
             background: white;
             border-radius: 16px;
@@ -311,75 +246,32 @@
             position: relative;
             overflow: hidden;
         }
-
         .pillar-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 4px;
         }
-
         .pillar-card:nth-child(1)::before { background: linear-gradient(90deg, #E74C3C, #E8833A); }
         .pillar-card:nth-child(2)::before { background: linear-gradient(90deg, #3498DB, #2ECC71); }
         .pillar-card:nth-child(3)::before { background: linear-gradient(90deg, #9B59B6, #7C4DFF); }
-
         .pillar-num {
-            display: inline-block;
-            font-size: 48px;
-            font-weight: 900;
-            opacity: 0.08;
-            position: absolute;
-            top: 10px;
-            right: 20px;
+            display: inline-block; font-size: 48px; font-weight: 900;
+            opacity: 0.08; position: absolute; top: 10px; right: 20px;
         }
-
-        .pillar-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 12px 0 16px;
-        }
-
-        .pillar-card ul {
-            text-align: left;
-            list-style: none;
-            padding: 0;
-        }
-
+        .pillar-card h3 { font-size: 18px; font-weight: 700; color: var(--primary); margin: 12px 0 16px; }
+        .pillar-card ul { text-align: left; list-style: none; padding: 0; }
         .pillar-card ul li {
-            font-size: 14px;
-            color: var(--text-light);
-            padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
+            font-size: 14px; color: var(--text-light);
+            padding: 6px 0 6px 20px; position: relative;
         }
-
         .pillar-card ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 700;
+            content: '→'; position: absolute; left: 0;
+            color: var(--accent); font-weight: 700;
         }
-
-        .pillar-metric {
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
-        }
-
-        .pillar-metric .num {
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--accent);
-        }
-
-        .pillar-metric .label {
-            font-size: 13px;
-            color: var(--text-light);
-        }
+        .pillar-metric { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+        .pillar-metric .num { font-size: 32px; font-weight: 900; color: var(--accent); }
+        .pillar-metric .label { font-size: 13px; color: var(--text-light); }
 
         /* ===== COMPARISON TABLE ===== */
         .comparison-wrapper {
@@ -388,95 +280,65 @@
             border: 1px solid var(--border);
             background: white;
         }
-
         .comparison-table {
             width: 100%;
+            min-width: 850px;
             border-collapse: collapse;
-            font-size: 14px;
+            font-size: 13.5px;
         }
-
         .comparison-table thead th {
-            padding: 20px 16px;
+            padding: 18px 14px;
             font-weight: 700;
             text-align: center;
             border-bottom: 2px solid var(--border);
-            position: relative;
         }
-
         .comparison-table thead th:first-child {
             text-align: left;
-            width: 200px;
+            width: 170px;
             background: var(--bg);
         }
-
-        .comparison-table thead th.daou {
-            background: linear-gradient(180deg, rgba(74,144,217,0.08), white);
-        }
-        .comparison-table thead th.hiworks {
-            background: linear-gradient(180deg, rgba(0,184,148,0.08), white);
-        }
-        .comparison-table thead th.jandi {
-            background: linear-gradient(180deg, rgba(124,77,255,0.08), white);
-        }
-
-        .vendor-logo {
-            font-size: 20px;
-            font-weight: 900;
-            margin-bottom: 4px;
-        }
-
+        .comparison-table thead th.daou { background: linear-gradient(180deg, rgba(74,144,217,0.08), white); }
+        .comparison-table thead th.hiworks { background: linear-gradient(180deg, rgba(0,184,148,0.08), white); }
+        .comparison-table thead th.jandi { background: linear-gradient(180deg, rgba(124,77,255,0.08), white); }
+        .comparison-table thead th.kt { background: linear-gradient(180deg, rgba(231,76,60,0.08), white); }
+        .vendor-logo { font-size: 18px; font-weight: 900; margin-bottom: 4px; }
         .vendor-logo.daou-color { color: var(--daou); }
         .vendor-logo.hiworks-color { color: var(--hiworks); }
         .vendor-logo.jandi-color { color: var(--jandi); }
-
-        .vendor-type {
-            font-size: 11px;
-            font-weight: 500;
-            color: var(--text-light);
-        }
-
+        .vendor-logo.kt-color { color: var(--kt); }
+        .vendor-type { font-size: 11px; font-weight: 500; color: var(--text-light); }
         .comparison-table tbody td {
-            padding: 14px 16px;
+            padding: 12px 14px;
             text-align: center;
             border-bottom: 1px solid var(--border);
             vertical-align: middle;
         }
-
         .comparison-table tbody td:first-child {
             text-align: left;
             font-weight: 600;
             color: var(--primary);
             background: var(--bg);
         }
-
-        .comparison-table tbody tr:hover td {
-            background: rgba(232,131,58,0.03);
-        }
-
-        .comparison-table tbody tr:hover td:first-child {
-            background: rgba(232,131,58,0.06);
-        }
-
+        .comparison-table tbody tr:hover td { background: rgba(232,131,58,0.03); }
+        .comparison-table tbody tr:hover td:first-child { background: rgba(232,131,58,0.06); }
         .comparison-table .category-row td {
             background: var(--primary) !important;
             color: white !important;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12.5px;
             letter-spacing: 1px;
-            padding: 10px 16px;
+            padding: 10px 14px;
         }
-
-        .check { color: var(--success); font-weight: 700; font-size: 18px; }
-        .cross { color: #DDD; font-size: 18px; }
-        .partial { color: var(--warning); font-weight: 700; font-size: 14px; }
+        .check { color: var(--success); font-weight: 700; font-size: 16px; }
+        .cross { color: #DDD; font-size: 16px; }
+        .partial { color: var(--warning); font-weight: 700; font-size: 13px; }
 
         /* ===== PRICING CARDS ===== */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
-
         .pricing-card {
             background: white;
             border-radius: 16px;
@@ -485,96 +347,52 @@
             position: relative;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-
         .pricing-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(0,0,0,0.1);
         }
-
-        .pricing-card.recommended {
-            border: 2px solid var(--accent);
-        }
-
+        .pricing-card.recommended { border: 2px solid var(--accent); }
         .pricing-card.recommended::after {
             content: '★ 추천';
             position: absolute;
-            top: 16px;
-            right: 16px;
+            top: 14px; right: 14px;
             background: var(--accent);
             color: white;
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
         }
-
-        .pricing-head {
-            padding: 32px 28px 24px;
-            text-align: center;
-        }
-
-        .pricing-card:nth-child(1) .pricing-head { background: linear-gradient(135deg, rgba(74,144,217,0.08), rgba(74,144,217,0.02)); }
-        .pricing-card:nth-child(2) .pricing-head { background: linear-gradient(135deg, rgba(0,184,148,0.08), rgba(0,184,148,0.02)); }
-        .pricing-card:nth-child(3) .pricing-head { background: linear-gradient(135deg, rgba(124,77,255,0.08), rgba(124,77,255,0.02)); }
-
-        .pricing-name {
-            font-size: 24px;
-            font-weight: 800;
-        }
-
-        .pricing-card:nth-child(1) .pricing-name { color: var(--daou); }
-        .pricing-card:nth-child(2) .pricing-name { color: var(--hiworks); }
-        .pricing-card:nth-child(3) .pricing-name { color: var(--jandi); }
-
-        .pricing-type {
-            font-size: 13px;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-
-        .pricing-amount {
-            margin-top: 20px;
-        }
-
-        .pricing-amount .price {
-            font-size: 36px;
-            font-weight: 900;
-            color: var(--primary);
-        }
-
-        .pricing-amount .unit {
-            font-size: 14px;
-            color: var(--text-light);
-        }
-
+        .pricing-head { padding: 28px 22px 20px; text-align: center; }
+        .pricing-card.card-daou .pricing-head { background: linear-gradient(135deg, rgba(74,144,217,0.08), rgba(74,144,217,0.02)); }
+        .pricing-card.card-hiworks .pricing-head { background: linear-gradient(135deg, rgba(0,184,148,0.08), rgba(0,184,148,0.02)); }
+        .pricing-card.card-jandi .pricing-head { background: linear-gradient(135deg, rgba(124,77,255,0.08), rgba(124,77,255,0.02)); }
+        .pricing-card.card-kt .pricing-head { background: linear-gradient(135deg, rgba(231,76,60,0.08), rgba(231,76,60,0.02)); }
+        .pricing-name { font-size: 22px; font-weight: 800; }
+        .card-daou .pricing-name { color: var(--daou); }
+        .card-hiworks .pricing-name { color: var(--hiworks); }
+        .card-jandi .pricing-name { color: var(--jandi); }
+        .card-kt .pricing-name { color: var(--kt); }
+        .pricing-type { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+        .pricing-amount { margin-top: 18px; }
+        .pricing-amount .price { font-size: 32px; font-weight: 900; color: var(--primary); }
+        .pricing-amount .unit { font-size: 13px; color: var(--text-light); }
         .pricing-amount .discount {
-            display: inline-block;
-            margin-top: 6px;
-            font-size: 13px;
-            color: var(--accent);
-            font-weight: 600;
+            display: inline-block; margin-top: 6px;
+            font-size: 12px; color: var(--accent); font-weight: 600;
             background: rgba(232,131,58,0.1);
-            padding: 3px 10px;
-            border-radius: 10px;
+            padding: 3px 10px; border-radius: 10px;
         }
-
-        .pricing-body {
-            padding: 28px;
-        }
-
-        .pricing-body ul {
-            list-style: none;
-        }
-
+        .pricing-body { padding: 24px 22px; }
+        .pricing-body ul { list-style: none; }
         .pricing-body ul li {
-            padding: 8px 0;
-            font-size: 14px;
+            padding: 6px 0;
+            font-size: 13px;
             color: var(--text);
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 8px;
         }
-
         .pricing-body ul li::before {
             content: '✓';
             color: var(--success);
@@ -582,75 +400,40 @@
             flex-shrink: 0;
             margin-top: 2px;
         }
-
-        .pricing-footer {
-            padding: 0 28px 28px;
-        }
-
+        .pricing-footer { padding: 0 22px 22px; }
         .pricing-total {
             background: var(--bg);
             border-radius: 12px;
-            padding: 16px;
+            padding: 14px;
             text-align: center;
         }
-
-        .pricing-total .label {
-            font-size: 12px;
-            color: var(--text-light);
-            margin-bottom: 4px;
-        }
-
-        .pricing-total .amount {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .pricing-total .note {
-            font-size: 11px;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
+        .pricing-total .label { font-size: 11px; color: var(--text-light); margin-bottom: 4px; }
+        .pricing-total .amount { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .pricing-total .note { font-size: 10.5px; color: var(--text-light); margin-top: 4px; }
 
         /* ===== ROADMAP ===== */
-        .roadmap {
-            position: relative;
-        }
-
+        .roadmap { position: relative; }
         .roadmap-line {
-            position: absolute;
-            left: 24px;
-            top: 0;
-            bottom: 0;
+            position: absolute; left: 24px; top: 0; bottom: 0;
             width: 3px;
             background: linear-gradient(to bottom, var(--accent), var(--primary));
             border-radius: 3px;
         }
-
         .roadmap-item {
-            display: flex;
-            gap: 28px;
+            display: flex; gap: 28px;
             padding: 0 0 36px 0;
             position: relative;
         }
-
         .roadmap-dot {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             border-radius: 50%;
             background: white;
             border: 3px solid var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 14px;
-            color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 14px; color: var(--accent);
             flex-shrink: 0;
-            position: relative;
-            z-index: 1;
+            position: relative; z-index: 1;
         }
-
         .roadmap-content {
             background: white;
             border-radius: 12px;
@@ -658,34 +441,28 @@
             border: 1px solid var(--border);
             flex: 1;
         }
-
-        .roadmap-content h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .roadmap-date {
-            font-size: 13px;
-            color: var(--accent);
+        .roadmap-content h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .roadmap-date { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+        .roadmap-content p { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+        .roadmap-badge {
+            display: inline-block;
+            font-size: 11px;
             font-weight: 600;
-            margin-bottom: 10px;
+            padding: 2px 10px;
+            border-radius: 10px;
+            margin-left: 8px;
+        }
+        .badge-who {
+            background: rgba(74,144,217,0.1);
+            color: var(--daou);
         }
 
-        .roadmap-content p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* ===== EFFECT METRICS ===== */
+        /* ===== METRICS ===== */
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
-
         .metric-card {
             background: white;
             border-radius: 16px;
@@ -693,28 +470,15 @@
             text-align: center;
             border: 1px solid var(--border);
         }
-
         .metric-value {
-            font-size: 42px;
-            font-weight: 900;
+            font-size: 42px; font-weight: 900;
             background: linear-gradient(135deg, var(--accent), var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        .metric-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-top: 4px;
-        }
-
-        .metric-detail {
-            font-size: 12px;
-            color: var(--text-light);
-            margin-top: 6px;
-        }
+        .metric-label { font-size: 14px; font-weight: 600; color: var(--primary); margin-top: 4px; }
+        .metric-detail { font-size: 12px; color: var(--text-light); margin-top: 6px; }
 
         /* ===== RECOMMENDATION ===== */
         .recommend-box {
@@ -725,122 +489,71 @@
             position: relative;
             overflow: hidden;
         }
-
         .recommend-box::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 500px;
-            height: 500px;
+            top: -50%; right: -20%;
+            width: 500px; height: 500px;
             background: radial-gradient(circle, rgba(232,131,58,0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
-
-        .recommend-box h3 {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .recommend-content {
-            position: relative;
-            z-index: 1;
-        }
-
+        .recommend-box h3 { font-size: 28px; font-weight: 800; margin-bottom: 20px; position: relative; z-index: 1; }
+        .recommend-content { position: relative; z-index: 1; }
         .recommend-reasons {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 30px;
         }
-
         .reason-item {
             background: rgba(255,255,255,0.08);
             border-radius: 12px;
             padding: 24px;
             border: 1px solid rgba(255,255,255,0.1);
         }
+        .reason-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--accent-light); }
+        .reason-item p { font-size: 13.5px; color: rgba(255,255,255,0.7); line-height: 1.7; }
 
-        .reason-item h4 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--accent-light);
-        }
-
-        .reason-item p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
-            line-height: 1.7;
-        }
-
-        /* ===== SCORE RADAR ===== */
+        /* ===== SCORE ===== */
         .score-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-top: 40px;
         }
-
         .score-card {
             background: white;
             border-radius: 16px;
             padding: 32px;
             border: 1px solid var(--border);
         }
-
         .score-card h4 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--border);
+            font-size: 18px; font-weight: 700; color: var(--primary);
+            margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--border);
         }
-
         .score-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 14px;
-            gap: 12px;
+            display: flex; align-items: center;
+            margin-bottom: 12px; gap: 12px;
         }
-
         .score-label {
-            width: 100px;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text);
-            flex-shrink: 0;
+            width: 95px; font-size: 12.5px; font-weight: 600; color: var(--text); flex-shrink: 0;
         }
-
         .score-bar-bg {
-            flex: 1;
-            height: 24px;
+            flex: 1; height: 22px;
             background: var(--bg);
             border-radius: 12px;
             overflow: hidden;
-            position: relative;
         }
-
         .score-bar {
-            height: 100%;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            font-size: 12px;
-            font-weight: 700;
-            color: white;
+            height: 100%; border-radius: 12px;
+            display: flex; align-items: center; justify-content: flex-end;
+            padding-right: 8px; font-size: 11px; font-weight: 700; color: white;
             transition: width 1s ease;
         }
-
         .score-bar.daou { background: linear-gradient(90deg, rgba(74,144,217,0.7), var(--daou)); }
         .score-bar.hiworks { background: linear-gradient(90deg, rgba(0,184,148,0.7), var(--hiworks)); }
         .score-bar.jandi { background: linear-gradient(90deg, rgba(124,77,255,0.7), var(--jandi)); }
+        .score-bar.kt { background: linear-gradient(90deg, rgba(231,76,60,0.7), var(--kt)); }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -850,84 +563,7 @@
             text-align: center;
             font-size: 13px;
         }
-
-        .footer strong {
-            color: rgba(255,255,255,0.8);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 28px; }
-            .problem-grid { grid-template-columns: 1fr; }
-            .pillar-grid { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; }
-            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-            .recommend-reasons { grid-template-columns: 1fr; }
-            .score-section { grid-template-columns: 1fr; }
-            .container { padding: 0 20px; }
-            .hero-inner { padding: 0 20px; }
-        }
-
-        /* ===== ANIMATION ===== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ===== SUMMARY TABLE ===== */
-        .summary-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            font-size: 14px;
-        }
-
-        .summary-table th, .summary-table td {
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .summary-table thead th {
-            background: var(--primary);
-            color: white;
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .summary-table tbody tr:hover {
-            background: rgba(232,131,58,0.03);
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .tag-good {
-            background: rgba(46,204,113,0.1);
-            color: var(--success);
-        }
-
-        .tag-warn {
-            background: rgba(243,156,18,0.1);
-            color: var(--warning);
-        }
-
-        .tag-danger {
-            background: rgba(231,76,60,0.1);
-            color: var(--danger);
-        }
+        .footer strong { color: rgba(255,255,255,0.8); }
 
         /* ===== CALLOUT ===== */
         .callout {
@@ -940,21 +576,44 @@
             color: var(--text);
             line-height: 1.8;
         }
-
-        .callout strong {
-            color: var(--accent);
+        .callout strong { color: var(--accent); }
+        .npo-discount {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(46,204,113,0.1); color: var(--success);
+            padding: 4px 12px; border-radius: 8px;
+            font-size: 12px; font-weight: 700;
         }
 
-        .npo-discount {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(46,204,113,0.1);
-            color: var(--success);
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 700;
+        /* ===== RANK CARDS ===== */
+        .rank-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        /* ===== ANIMATION ===== */
+        .fade-in {
+            opacity: 0; transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1100px) {
+            .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 28px; }
+            .problem-grid { grid-template-columns: 1fr; }
+            .pillar-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+            .recommend-reasons { grid-template-columns: 1fr; }
+            .score-section { grid-template-columns: 1fr; }
+            .rank-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+            .hero-inner { padding: 0 20px; }
         }
     </style>
 </head>
@@ -963,11 +622,11 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
     <div class="hero-inner">
-        <div class="hero-badge">INTERNAL BRIEFING 2026</div>
+        <div class="hero-badge">INTERNAL BRIEFING 2026 — Updated</div>
         <h1>겨레얼살리기국민운동본부<br><span>그룹웨어 도입 브리핑</span></h1>
         <p class="hero-sub">
             동네축구에서 프로리그로 — 비영리 조직의 성숙과 효율성을 위한 체계화 로드맵. 
-            세 가지 후보 솔루션의 비교 분석 및 최적 선택을 위한 의사결정 자료입니다.
+            네 가지 후보 솔루션의 비교 분석 및 최적 선택을 위한 의사결정 자료입니다.
         </p>
         <div class="hero-meta">
             <div class="hero-meta-item">
@@ -980,7 +639,7 @@
             </div>
             <div class="hero-meta-item">
                 <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                비교 대상: 다우오피스 · 하이웍스 · 잔디
+                비교 대상: 다우오피스 · 하이웍스 · 잔디 · <strong style="color:var(--accent-light)">KT BizOffice</strong>
             </div>
         </div>
     </div>
@@ -995,7 +654,7 @@
         <a href="#pricing">비용 분석</a>
         <a href="#scoring">적합도 평가</a>
         <a href="#recommendation">추천 결론</a>
-        <a href="#roadmap">로드맵</a>
+        <a href="#roadmap">즉시 실행 사항</a>
         <a href="#effects">기대 효과</a>
     </div>
 </nav>
@@ -1011,7 +670,6 @@
                 디지털 인프라 없이 구성원 헌신에만 의존하는 구조적 한계에 직면했습니다.
             </p>
         </div>
-
         <div class="problem-grid fade-in">
             <div class="problem-card">
                 <div class="problem-icon">👤</div>
@@ -1038,7 +696,6 @@
                 <div class="impact">→ 업무 속도 저하, 구성원 피로 누적</div>
             </div>
         </div>
-
         <div class="callout fade-in" style="margin-top: 30px;">
             <strong>핵심 진단:</strong> 이러한 문제들은 조직의 선의와 헌신으로 봉합되어 왔으나, 
             사업 확장과 함께 <strong>더 이상 구조적 개선 없이 지속될 수 없는 시점</strong>에 도달했습니다.
@@ -1055,11 +712,9 @@
             <div class="section-num">2</div>
             <h2 class="section-title">추진 전략 — 세 개의 다리로 건넌다</h2>
             <p class="section-desc">
-                그룹웨어 도입을 단순한 시스템 설치가 아닌, 조직 성숙의 계기로 설계합니다. 
-                세 가지 핵심 기둥(3-Pillar)을 동시에 구축합니다.
+                그룹웨어 도입을 단순한 시스템 설치가 아닌, 조직 성숙의 계기로 설계합니다.
             </p>
         </div>
-
         <div class="pillar-grid fade-in">
             <div class="pillar-card">
                 <div class="pillar-num">01</div>
@@ -1075,7 +730,6 @@
                     <div class="label">인수인계 기간 단축</div>
                 </div>
             </div>
-
             <div class="pillar-card">
                 <div class="pillar-num">02</div>
                 <h3>📋 매뉴얼·프로세스 정비</h3>
@@ -1090,7 +744,6 @@
                     <div class="label">문서 검색 시간 절감</div>
                 </div>
             </div>
-
             <div class="pillar-card">
                 <div class="pillar-num">03</div>
                 <h3>💎 재정·운영 관리</h3>
@@ -1116,9 +769,9 @@
     <div class="container">
         <div class="section-header fade-in">
             <div class="section-num">3</div>
-            <h2 class="section-title">솔루션 비교 — 3사 기능 상세 비교</h2>
+            <h2 class="section-title">솔루션 비교 — 4사 기능 상세 비교</h2>
             <p class="section-desc">
-                다우오피스, 하이웍스, 잔디 세 후보를 겨레얼의 핵심 요구사항 중심으로 비교합니다.
+                다우오피스, 하이웍스, 잔디, KT BizOffice 네 후보를 겨레얼의 핵심 요구사항 중심으로 비교합니다.
             </p>
         </div>
 
@@ -1135,6 +788,10 @@
                             <div class="vendor-logo hiworks-color">하이웍스</div>
                             <div class="vendor-type">클라우드 그룹웨어</div>
                         </th>
+                        <th class="kt">
+                            <div class="vendor-logo kt-color">KT BizOffice</div>
+                            <div class="vendor-type">올인원 그룹웨어</div>
+                        </th>
                         <th class="jandi">
                             <div class="vendor-logo jandi-color">잔디 (JANDI)</div>
                             <div class="vendor-type">메신저 기반 협업툴</div>
@@ -1142,167 +799,52 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- 기본 정보 -->
-                    <tr class="category-row"><td colspan="4">서비스 개요</td></tr>
-                    <tr>
-                        <td>서비스 유형</td>
-                        <td>그룹웨어 + 인사/경리 통합</td>
-                        <td>메일/그룹웨어 + HR</td>
-                        <td>메신저 기반 협업툴</td>
-                    </tr>
-                    <tr>
-                        <td>운영사</td>
-                        <td>다우기술</td>
-                        <td>가비아</td>
-                        <td>토스랩</td>
-                    </tr>
-                    <tr>
-                        <td>배포 방식</td>
-                        <td>SaaS (클라우드)</td>
-                        <td>SaaS (클라우드)</td>
-                        <td>SaaS (클라우드)</td>
-                    </tr>
-                    <tr>
-                        <td>무료 요금제</td>
-                        <td><span class="check">✔</span> 5인 이하 무료</td>
-                        <td><span class="cross">—</span></td>
-                        <td><span class="check">✔</span> 20인 이하 (기능 제한)</td>
-                    </tr>
+                    <tr class="category-row"><td colspan="5">서비스 개요</td></tr>
+                    <tr><td>서비스 유형</td><td>그룹웨어 + 인사/경리 통합</td><td>메일/그룹웨어 + HR</td><td>그룹웨어 + ERP 연동</td><td>메신저 기반 협업툴</td></tr>
+                    <tr><td>운영사</td><td>다우기술</td><td>가비아</td><td>KT (kt cloud)</td><td>토스랩</td></tr>
+                    <tr><td>배포 방식</td><td>SaaS (클라우드)</td><td>SaaS (클라우드)</td><td>SaaS (kt cloud 기반)</td><td>SaaS (클라우드)</td></tr>
+                    <tr><td>무료 요금제</td><td><span class="check">✔</span> 5인 이하</td><td><span class="cross">—</span></td><td><span class="cross">—</span> 최소 5 ID</td><td><span class="check">✔</span> 20인 (제한)</td></tr>
+                    <tr><td>고객 수</td><td>10,000+ 고객사</td><td>점유율 1위 표방</td><td>5,000+ 기업·기관</td><td>40만+ 사용자</td></tr>
 
-                    <!-- 핵심 기능 -->
-                    <tr class="category-row"><td colspan="4">핵심 업무 기능</td></tr>
-                    <tr>
-                        <td>기업 메일</td>
-                        <td><span class="check">✔</span> 기본 제공</td>
-                        <td><span class="check">✔</span> 무제한 용량</td>
-                        <td><span class="cross">—</span> 미제공</td>
-                    </tr>
-                    <tr>
-                        <td>전자결재</td>
-                        <td><span class="check">✔</span> 풀 기능</td>
-                        <td><span class="check">✔</span> 그룹웨어 요금제</td>
-                        <td><span class="cross">—</span> 미제공</td>
-                    </tr>
-                    <tr>
-                        <td>메신저</td>
-                        <td><span class="check">✔</span> 내장 메신저</td>
-                        <td><span class="check">✔</span> 조직도 기반</td>
-                        <td><span class="check">✔</span> 핵심 기능</td>
-                    </tr>
-                    <tr>
-                        <td>화상회의</td>
-                        <td><span class="partial">△</span> 기본 수준</td>
-                        <td><span class="check">✔</span> 최대 100인</td>
-                        <td><span class="check">✔</span> 최대 300인</td>
-                    </tr>
-                    <tr>
-                        <td>캘린더/일정관리</td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="partial">△</span> Google 캘린더 연동</td>
-                    </tr>
-                    <tr>
-                        <td>게시판/공지</td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="partial">△</span> 토픽으로 대체</td>
-                    </tr>
-                    <tr>
-                        <td>클라우드 드라이브</td>
-                        <td><span class="check">✔</span> 옵션 추가</td>
-                        <td><span class="check">✔</span> 옵션 추가</td>
-                        <td><span class="check">✔</span> 멤버당 10GB (유료)</td>
-                    </tr>
+                    <tr class="category-row"><td colspan="5">핵심 업무 기능</td></tr>
+                    <tr><td>기업 메일</td><td><span class="check">✔</span> 기본 제공</td><td><span class="check">✔</span> 무제한 용량</td><td><span class="check">✔</span> 10GB/인, 보안메일</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>전자결재</td><td><span class="check">✔</span> 풀 기능</td><td><span class="check">✔</span> 그룹웨어 요금제</td><td><span class="check">✔</span> 커스텀 양식+편집기</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>메신저</td><td><span class="check">✔</span> 내장</td><td><span class="check">✔</span> 조직도 기반</td><td><span class="check">✔</span> BizMekaTalk</td><td><span class="check">✔</span> 핵심 기능</td></tr>
+                    <tr><td>화상회의</td><td><span class="partial">△</span> 기본</td><td><span class="check">✔</span> 최대 100인</td><td><span class="check">✔</span> HD급 화상회의</td><td><span class="check">✔</span> 최대 300인</td></tr>
+                    <tr><td>캘린더/일정관리</td><td><span class="check">✔</span></td><td><span class="check">✔</span></td><td><span class="check">✔</span> 공유·초대·알림</td><td><span class="partial">△</span> Google 연동</td></tr>
+                    <tr><td>게시판/공지</td><td><span class="check">✔</span></td><td><span class="check">✔</span></td><td><span class="check">✔</span> 팝업공지·포토게시</td><td><span class="partial">△</span> 토픽 대체</td></tr>
+                    <tr><td>프로젝트 관리 (PMS)</td><td><span class="partial">△</span> 기본</td><td><span class="cross">—</span></td><td><span class="check">✔</span> 간트차트·산출물·보고서</td><td><span class="partial">△</span> 할 일 관리</td></tr>
+                    <tr><td>업무포탈 (대시보드)</td><td><span class="check">✔</span></td><td><span class="partial">△</span></td><td><span class="check">✔</span> 포틀릿 개인화</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>웹디스크/드라이브</td><td><span class="check">✔</span> 옵션</td><td><span class="check">✔</span> 옵션</td><td><span class="check">✔</span> 보안설정·공유</td><td><span class="check">✔</span> 10GB (유료)</td></tr>
 
-                    <!-- 인사/재정 -->
-                    <tr class="category-row"><td colspan="4">인사·재정 관리 (겨레얼 핵심 요구)</td></tr>
-                    <tr>
-                        <td>근태관리</td>
-                        <td><span class="check">✔</span> 스탠다드/프리미엄</td>
-                        <td><span class="check">✔</span> 52시간 관리</td>
-                        <td><span class="cross">—</span></td>
-                    </tr>
-                    <tr>
-                        <td>휴가관리</td>
-                        <td><span class="check">✔</span> 연월차 자동생성</td>
-                        <td><span class="check">✔</span> 연차촉진</td>
-                        <td><span class="cross">—</span></td>
-                    </tr>
-                    <tr>
-                        <td>경비/정산 관리</td>
-                        <td><span class="check">✔</span> 법인카드·계좌 연동</td>
-                        <td><span class="partial">△</span> 별도 HR 상품</td>
-                        <td><span class="cross">—</span></td>
-                    </tr>
-                    <tr>
-                        <td>예산 대시보드</td>
-                        <td><span class="check">✔</span> 실시간 조회</td>
-                        <td><span class="partial">△</span> 제한적</td>
-                        <td><span class="cross">—</span></td>
-                    </tr>
-                    <tr>
-                        <td>전자세금계산서</td>
-                        <td><span class="check">✔</span> 옵션</td>
-                        <td><span class="cross">—</span></td>
-                        <td><span class="cross">—</span></td>
-                    </tr>
+                    <tr class="category-row"><td colspan="5">인사·재정 관리 (겨레얼 핵심 요구)</td></tr>
+                    <tr><td>근태관리</td><td><span class="check">✔</span> 스탠다드/프리미엄</td><td><span class="check">✔</span> 52시간 관리</td><td><span class="check">✔</span> GPS·유연근무·52시간</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>휴가관리</td><td><span class="check">✔</span> 연월차 자동</td><td><span class="check">✔</span> 연차촉진</td><td><span class="check">✔</span> 결재 연동 자동계산</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>경비/정산 관리</td><td><span class="check">✔</span> 법인카드·계좌 연동</td><td><span class="partial">△</span> 별도 HR 상품</td><td><span class="partial">△</span> 무증빙서비스(출시예정)</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>예산 대시보드</td><td><span class="check">✔</span> 실시간 조회</td><td><span class="partial">△</span> 제한적</td><td><span class="partial">△</span> ERP 연동 시</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>전자계약</td><td><span class="partial">△</span> 옵션</td><td><span class="cross">—</span></td><td><span class="check">✔</span> PKI 기반 전자서명</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>업무일지/업무보고</td><td><span class="partial">△</span></td><td><span class="cross">—</span></td><td><span class="check">✔</span> 일간/주간/월간</td><td><span class="cross">—</span></td></tr>
 
-                    <!-- 보안 -->
-                    <tr class="category-row"><td colspan="4">보안·관리</td></tr>
-                    <tr>
-                        <td>권한 단계 관리</td>
-                        <td><span class="check">✔</span> 다단계</td>
-                        <td><span class="check">✔</span> 다단계</td>
-                        <td><span class="check">✔</span> 4단계</td>
-                    </tr>
-                    <tr>
-                        <td>IP 접근 제한</td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="check">✔</span> Enterprise</td>
-                    </tr>
-                    <tr>
-                        <td>2단계 인증</td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="check">✔</span></td>
-                        <td><span class="check">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>메일 보안 (암호메일 등)</td>
-                        <td><span class="check">✔</span> 통합메일보안 옵션</td>
-                        <td><span class="check">✔</span> 암호메일·승인메일</td>
-                        <td><span class="cross">—</span></td>
-                    </tr>
+                    <tr class="category-row"><td colspan="5">보안·관리·연동</td></tr>
+                    <tr><td>권한 단계 관리</td><td><span class="check">✔</span> 다단계</td><td><span class="check">✔</span> 다단계</td><td><span class="check">✔</span> 전 메뉴 권한설정</td><td><span class="check">✔</span> 4단계</td></tr>
+                    <tr><td>2단계 인증/IP관리</td><td><span class="check">✔</span></td><td><span class="check">✔</span></td><td><span class="check">✔</span> OTP·IP·생체인증</td><td><span class="check">✔</span></td></tr>
+                    <tr><td>보안 인증</td><td>—</td><td>—</td><td><span class="check">✔</span> ISO 27001 등 6종, CSA STAR Gold</td><td>—</td></tr>
+                    <tr><td>ERP 연동</td><td><span class="check">✔</span> 시스템에버</td><td><span class="partial">△</span></td><td><span class="check">✔</span> Office Connect API</td><td><span class="partial">△</span> Webhook</td></tr>
+                    <tr><td>출입통제 연동</td><td><span class="check">✔</span> ADT캡스, 세콤</td><td><span class="check">✔</span> 세콤, 캡스, 슈프리마</td><td><span class="check">✔</span> KT텔레캅, 세콤, ADT캡스</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>MS Teams 연동</td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="check">✔</span> Teams In App</td><td><span class="cross">—</span></td></tr>
 
-                    <!-- AI -->
-                    <tr class="category-row"><td colspan="4">AI·자동화</td></tr>
-                    <tr>
-                        <td>AI 기능</td>
-                        <td><span class="partial">△</span> 기본 수준</td>
-                        <td><span class="check">✔</span> AI 메일 요약·번역</td>
-                        <td><span class="check">✔</span> AI Sprinkler (별도 플랜)</td>
-                    </tr>
-                    <tr>
-                        <td>외부 시스템 연동</td>
-                        <td><span class="check">✔</span> ERP, 캡스, 세콤 등</td>
-                        <td><span class="check">✔</span> 세콤, 캡스, 슈프리마</td>
-                        <td><span class="check">✔</span> Google, Trello, JIRA 등</td>
-                    </tr>
+                    <tr class="category-row"><td colspan="5">AI·부가 기능</td></tr>
+                    <tr><td>AI 기능</td><td><span class="partial">△</span> 기본</td><td><span class="check">✔</span> AI 메일 요약·번역</td><td><span class="check">✔</span> AI 기능 탑재</td><td><span class="check">✔</span> Sprinkler (별도)</td></tr>
+                    <tr><td>다국어 지원</td><td>한국어</td><td>한국어</td><td>한/영/중/일 4개국어</td><td>한/영/중/일/베트남어</td></tr>
 
-                    <!-- 특이사항 -->
-                    <tr class="category-row"><td colspan="4">비영리 특화 사항</td></tr>
-                    <tr>
-                        <td>비영리 할인</td>
-                        <td><span class="cross">—</span> 공식 할인 없음</td>
-                        <td><span class="cross">—</span> 공식 할인 없음</td>
-                        <td><span class="npo-discount">✔ NGO/비영리 50% 할인</span></td>
-                    </tr>
-                    <tr>
-                        <td>테크숩 지원</td>
-                        <td><span class="cross">—</span></td>
-                        <td><span class="cross">—</span></td>
-                        <td><span class="check">✔</span> 프리미엄 1년 무료</td>
-                    </tr>
+                    <tr class="category-row"><td colspan="5">고객 지원</td></tr>
+                    <tr><td>초기 세팅/교육</td><td><span class="check">✔</span> 유료 옵션</td><td><span class="partial">△</span></td><td><span class="check">✔</span> 전담 담당자 무상 지원</td><td><span class="partial">△</span></td></tr>
+                    <tr><td>정기 교육</td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="check">✔</span> 매월 정기 교육</td><td><span class="cross">—</span></td></tr>
+                    <tr><td>전담 고객센터</td><td>일반 지원</td><td>일반 지원</td><td><span class="check">✔</span> 080 전용 + 24시간 장애상담</td><td>일반 지원</td></tr>
+
+                    <tr class="category-row"><td colspan="5">비영리 특화</td></tr>
+                    <tr><td>비영리 할인</td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="partial">△</span> 상시 프로모션 (별도 협의)</td><td><span class="npo-discount">✔ NGO 50% 할인</span></td></tr>
+                    <tr><td>설치비/도입비</td><td>50,000원 (1회)</td><td>44,000원 (1회)</td><td><strong style="color:var(--success)">없음 (0원)</strong></td><td>없음</td></tr>
                 </tbody>
             </table>
         </div>
@@ -1323,8 +865,7 @@
         </div>
 
         <div class="pricing-grid fade-in">
-            <!-- 다우오피스 -->
-            <div class="pricing-card recommended">
+            <div class="pricing-card card-daou recommended">
                 <div class="pricing-head">
                     <div class="pricing-name">다우오피스</div>
                     <div class="pricing-type">서비스형 스탠다드</div>
@@ -1335,25 +876,24 @@
                 </div>
                 <div class="pricing-body">
                     <ul>
-                        <li>업무관리 + 인사관리 + 경리관리 올인원</li>
-                        <li>전자결재, 메일, 메신저, 캘린더 기본 포함</li>
-                        <li>근태관리·휴가관리 기본 제공</li>
+                        <li>업무+인사+경리 올인원</li>
+                        <li>전자결재, 메일, 메신저 포함</li>
+                        <li>근태·휴가관리 기본 제공</li>
                         <li>법인카드 2개 무료 연동</li>
-                        <li>1인당 1GB (용량 추가 별도)</li>
+                        <li>1인당 1GB (추가 별도)</li>
                         <li>설치비 50,000원 (1회)</li>
                     </ul>
                 </div>
                 <div class="pricing-footer">
                     <div class="pricing-total">
-                        <div class="label">10인 × 12개월 예상 비용 (첫해 할인 적용)</div>
+                        <div class="label">10인 × 12개월 (첫해 할인)</div>
                         <div class="amount">월 20,000원 → 연 240,000원</div>
-                        <div class="note">+ 설치비 50,000원 + 부가세 별도</div>
+                        <div class="note">+ 설치비 5만원 + 부가세 별도</div>
                     </div>
                 </div>
             </div>
 
-            <!-- 하이웍스 -->
-            <div class="pricing-card">
+            <div class="pricing-card card-hiworks">
                 <div class="pricing-head">
                     <div class="pricing-name">하이웍스</div>
                     <div class="pricing-type">그룹웨어 25 (10인 기본)</div>
@@ -1364,25 +904,52 @@
                 </div>
                 <div class="pricing-body">
                     <ul>
-                        <li>무제한 메일 용량 + 대용량 첨부</li>
-                        <li>전자결재, 근무관리, 메신저 포함</li>
+                        <li>무제한 메일 용량</li>
+                        <li>전자결재, 근무관리 포함</li>
                         <li>화상회의 (최대 100인)</li>
-                        <li>공용메일·그룹메일·암호메일</li>
-                        <li>AI 메일 요약/번역 기능</li>
+                        <li>AI 메일 요약/번역</li>
+                        <li>공용메일·암호메일</li>
                         <li>도입비 44,000원 (1회)</li>
                     </ul>
                 </div>
                 <div class="pricing-footer">
                     <div class="pricing-total">
-                        <div class="label">10인 × 12개월 예상 비용 (그룹웨어)</div>
+                        <div class="label">10인 × 12개월 (그룹웨어)</div>
                         <div class="amount">월 44,000원 → 연 528,000원</div>
-                        <div class="note">+ 도입비 44,000원 + 부가세 별도 (첫해 할인 시 약 264,000원)</div>
+                        <div class="note">첫해 할인 시 약 264,000원 + 도입비</div>
                     </div>
                 </div>
             </div>
 
-            <!-- 잔디 -->
-            <div class="pricing-card">
+            <div class="pricing-card card-kt">
+                <div class="pricing-head">
+                    <div class="pricing-name">KT BizOffice</div>
+                    <div class="pricing-type">기본서비스 (3년 약정)</div>
+                    <div class="pricing-amount">
+                        <div class="price">5,950<span class="unit">원/인/월</span></div>
+                        <div class="discount">3년약정 15%↓ / 무약정 7,000원</div>
+                    </div>
+                </div>
+                <div class="pricing-body">
+                    <ul>
+                        <li>메일+결재+메신저+PMS 풀패키지</li>
+                        <li>화상회의, 전자계약 부가</li>
+                        <li>근태관리 (GPS·출입연동)</li>
+                        <li>업무포탈·업무일지·설문</li>
+                        <li>10GB/인, 설치비 0원</li>
+                        <li>전담 세팅/교육 무상 지원</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <div class="pricing-total">
+                        <div class="label">10인 × 12개월 (3년 약정)</div>
+                        <div class="amount">월 59,500원 → 연 714,000원</div>
+                        <div class="note">설치비 0원 + 프로모션 최대 60% 할인 가능</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-card card-jandi">
                 <div class="pricing-head">
                     <div class="pricing-name">잔디 (JANDI)</div>
                     <div class="pricing-type">Premium 플랜</div>
@@ -1393,28 +960,28 @@
                 </div>
                 <div class="pricing-body">
                     <ul>
-                        <li>무제한 메시지 검색·멤버 초대</li>
-                        <li>멤버당 10GB 저장 공간</li>
+                        <li>무제한 메시지·멤버</li>
+                        <li>멤버당 10GB 저장</li>
                         <li>화상회의 최대 300인</li>
-                        <li>메시지 번역, 예약 발송</li>
-                        <li>Google Calendar, Trello 연동</li>
-                        <li>테크숩 인증 시 첫해 무료 가능</li>
+                        <li>메시지 번역·예약 발송</li>
+                        <li>Google·Trello 연동</li>
+                        <li>테크숩 인증 시 첫해 무료</li>
                     </ul>
                 </div>
                 <div class="pricing-footer">
                     <div class="pricing-total">
-                        <div class="label">10인 × 12개월 예상 비용 (비영리 할인)</div>
+                        <div class="label">10인 × 12개월 (비영리 할인)</div>
                         <div class="amount">월 30,000원 → 연 360,000원</div>
-                        <div class="note">테크숩 인증 시 첫 1년 무료 + 이후 50% 할인</div>
+                        <div class="note">테크숩 인증 시 첫해 무료 가능</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="callout fade-in" style="margin-top: 30px;">
-            <strong>비용 핵심 요약:</strong> 단순 비용만 보면 다우오피스 서비스형(첫해 할인)이 가장 저렴하며, 
-            잔디는 테크숩 인증을 받으면 첫해 무료로 시작 가능합니다. 
-            다만 <strong>잔디는 메일·전자결재·경비정산 기능이 없으므로</strong> 그룹웨어의 전체 요구사항을 충족하기 어렵습니다.
+            <strong>비용 핵심 요약:</strong> 순수 비용은 다우오피스(첫해 할인)가 가장 저렴합니다.
+            KT BizOffice는 정가는 높지만 <strong>설치비 0원 + 전담 교육/세팅 무상 지원 + 상시 프로모션(최대 60%)</strong>으로 
+            실질 비용이 크게 낮아질 수 있습니다. 잔디는 메일·결재·경비 기능이 없어 그룹웨어 단독은 부적합합니다.
         </div>
     </div>
 </section>
@@ -1428,114 +995,65 @@
             <div class="section-num">5</div>
             <h2 class="section-title">적합도 평가 — 겨레얼 맞춤 스코어카드</h2>
             <p class="section-desc">
-                보고서에서 도출된 4대 과제(역할 전문화, 프로세스 정비, 재정 관리, 비용 효율)를 기준으로 
-                각 솔루션의 적합도를 100점 만점으로 평가합니다.
+                보고서 4대 과제(역할 전문화, 프로세스 정비, 재정 관리, 비용 효율) 기준으로 100점 만점 평가합니다.
             </p>
         </div>
 
         <div class="score-section fade-in">
             <div class="score-card">
                 <h4>항목별 적합도 점수</h4>
-                
-                <p style="font-size:13px; color:var(--text-light); margin-bottom:20px; font-weight:600;">
-                    역할 전문화 (권한 관리·조직도·전자결재)
-                </p>
-                <div class="score-row">
-                    <span class="score-label">다우오피스</span>
-                    <div class="score-bar-bg"><div class="score-bar daou" style="width:92%">92</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">하이웍스</span>
-                    <div class="score-bar-bg"><div class="score-bar hiworks" style="width:85%">85</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">잔디</span>
-                    <div class="score-bar-bg"><div class="score-bar jandi" style="width:45%">45</div></div>
-                </div>
+                <p style="font-size:12.5px; color:var(--text-light); margin-bottom:16px; font-weight:600;">역할 전문화 (권한·조직도·전자결재)</p>
+                <div class="score-row"><span class="score-label">다우오피스</span><div class="score-bar-bg"><div class="score-bar daou" style="width:92%">92</div></div></div>
+                <div class="score-row"><span class="score-label">하이웍스</span><div class="score-bar-bg"><div class="score-bar hiworks" style="width:85%">85</div></div></div>
+                <div class="score-row"><span class="score-label">KT BizOffice</span><div class="score-bar-bg"><div class="score-bar kt" style="width:90%">90</div></div></div>
+                <div class="score-row"><span class="score-label">잔디</span><div class="score-bar-bg"><div class="score-bar jandi" style="width:45%">45</div></div></div>
 
-                <p style="font-size:13px; color:var(--text-light); margin: 20px 0 12px; font-weight:600;">
-                    프로세스 정비 (문서 관리·게시판·양식)
-                </p>
-                <div class="score-row">
-                    <span class="score-label">다우오피스</span>
-                    <div class="score-bar-bg"><div class="score-bar daou" style="width:88%">88</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">하이웍스</span>
-                    <div class="score-bar-bg"><div class="score-bar hiworks" style="width:82%">82</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">잔디</span>
-                    <div class="score-bar-bg"><div class="score-bar jandi" style="width:55%">55</div></div>
-                </div>
+                <p style="font-size:12.5px; color:var(--text-light); margin: 18px 0 12px; font-weight:600;">프로세스 정비 (문서·게시판·PMS)</p>
+                <div class="score-row"><span class="score-label">다우오피스</span><div class="score-bar-bg"><div class="score-bar daou" style="width:88%">88</div></div></div>
+                <div class="score-row"><span class="score-label">하이웍스</span><div class="score-bar-bg"><div class="score-bar hiworks" style="width:82%">82</div></div></div>
+                <div class="score-row"><span class="score-label">KT BizOffice</span><div class="score-bar-bg"><div class="score-bar kt" style="width:93%">93</div></div></div>
+                <div class="score-row"><span class="score-label">잔디</span><div class="score-bar-bg"><div class="score-bar jandi" style="width:55%">55</div></div></div>
 
-                <p style="font-size:13px; color:var(--text-light); margin: 20px 0 12px; font-weight:600;">
-                    재정·운영 관리 (정산·예산·법인카드)
-                </p>
-                <div class="score-row">
-                    <span class="score-label">다우오피스</span>
-                    <div class="score-bar-bg"><div class="score-bar daou" style="width:95%">95</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">하이웍스</span>
-                    <div class="score-bar-bg"><div class="score-bar hiworks" style="width:60%">60</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">잔디</span>
-                    <div class="score-bar-bg"><div class="score-bar jandi" style="width:15%">15</div></div>
-                </div>
+                <p style="font-size:12.5px; color:var(--text-light); margin: 18px 0 12px; font-weight:600;">재정·운영 관리 (정산·예산·법인카드)</p>
+                <div class="score-row"><span class="score-label">다우오피스</span><div class="score-bar-bg"><div class="score-bar daou" style="width:95%">95</div></div></div>
+                <div class="score-row"><span class="score-label">하이웍스</span><div class="score-bar-bg"><div class="score-bar hiworks" style="width:60%">60</div></div></div>
+                <div class="score-row"><span class="score-label">KT BizOffice</span><div class="score-bar-bg"><div class="score-bar kt" style="width:68%">68</div></div></div>
+                <div class="score-row"><span class="score-label">잔디</span><div class="score-bar-bg"><div class="score-bar jandi" style="width:15%">15</div></div></div>
 
-                <p style="font-size:13px; color:var(--text-light); margin: 20px 0 12px; font-weight:600;">
-                    비용 효율성 (10인 기준 연간 비용)
-                </p>
-                <div class="score-row">
-                    <span class="score-label">다우오피스</span>
-                    <div class="score-bar-bg"><div class="score-bar daou" style="width:90%">90</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">하이웍스</span>
-                    <div class="score-bar-bg"><div class="score-bar hiworks" style="width:75%">75</div></div>
-                </div>
-                <div class="score-row">
-                    <span class="score-label">잔디</span>
-                    <div class="score-bar-bg"><div class="score-bar jandi" style="width:82%">82</div></div>
-                </div>
+                <p style="font-size:12.5px; color:var(--text-light); margin: 18px 0 12px; font-weight:600;">비용 효율성 (10인 기준)</p>
+                <div class="score-row"><span class="score-label">다우오피스</span><div class="score-bar-bg"><div class="score-bar daou" style="width:90%">90</div></div></div>
+                <div class="score-row"><span class="score-label">하이웍스</span><div class="score-bar-bg"><div class="score-bar hiworks" style="width:75%">75</div></div></div>
+                <div class="score-row"><span class="score-label">KT BizOffice</span><div class="score-bar-bg"><div class="score-bar kt" style="width:65%">65</div></div></div>
+                <div class="score-row"><span class="score-label">잔디</span><div class="score-bar-bg"><div class="score-bar jandi" style="width:82%">82</div></div></div>
             </div>
 
             <div class="score-card">
                 <h4>종합 평가 점수 (100점 만점)</h4>
-                
-                <div style="text-align: center; padding: 20px 0;">
-                    <div style="margin-bottom: 30px;">
-                        <div style="font-size:14px; font-weight:700; color:var(--daou); margin-bottom:8px;">🥇 다우오피스</div>
-                        <div class="score-row">
-                            <span class="score-label" style="width:auto;"></span>
-                            <div class="score-bar-bg" style="height:36px;"><div class="score-bar daou" style="width:91%; font-size:16px;">91점</div></div>
-                        </div>
+                <div style="padding: 16px 0;">
+                    <div style="margin-bottom: 24px;">
+                        <div style="font-size:13px; font-weight:700; color:var(--daou); margin-bottom:6px;">🥇 다우오피스</div>
+                        <div class="score-row"><span class="score-label" style="width:auto;"></span><div class="score-bar-bg" style="height:32px;"><div class="score-bar daou" style="width:91%; font-size:15px;">91점</div></div></div>
                     </div>
-                    <div style="margin-bottom: 30px;">
-                        <div style="font-size:14px; font-weight:700; color:var(--hiworks); margin-bottom:8px;">🥈 하이웍스</div>
-                        <div class="score-row">
-                            <span class="score-label" style="width:auto;"></span>
-                            <div class="score-bar-bg" style="height:36px;"><div class="score-bar hiworks" style="width:76%; font-size:16px;">76점</div></div>
-                        </div>
+                    <div style="margin-bottom: 24px;">
+                        <div style="font-size:13px; font-weight:700; color:var(--kt); margin-bottom:6px;">🥈 KT BizOffice</div>
+                        <div class="score-row"><span class="score-label" style="width:auto;"></span><div class="score-bar-bg" style="height:32px;"><div class="score-bar kt" style="width:80%; font-size:15px;">80점</div></div></div>
                     </div>
-                    <div style="margin-bottom: 30px;">
-                        <div style="font-size:14px; font-weight:700; color:var(--jandi); margin-bottom:8px;">🥉 잔디 (JANDI)</div>
-                        <div class="score-row">
-                            <span class="score-label" style="width:auto;"></span>
-                            <div class="score-bar-bg" style="height:36px;"><div class="score-bar jandi" style="width:49%; font-size:16px;">49점</div></div>
-                        </div>
+                    <div style="margin-bottom: 24px;">
+                        <div style="font-size:13px; font-weight:700; color:var(--hiworks); margin-bottom:6px;">🥉 하이웍스</div>
+                        <div class="score-row"><span class="score-label" style="width:auto;"></span><div class="score-bar-bg" style="height:32px;"><div class="score-bar hiworks" style="width:76%; font-size:15px;">76점</div></div></div>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <div style="font-size:13px; font-weight:700; color:var(--jandi); margin-bottom:6px;">4위 잔디 (JANDI)</div>
+                        <div class="score-row"><span class="score-label" style="width:auto;"></span><div class="score-bar-bg" style="height:32px;"><div class="score-bar jandi" style="width:49%; font-size:15px;">49점</div></div></div>
                     </div>
                 </div>
-
-                <div style="background:var(--bg); border-radius:12px; padding:20px; margin-top:10px;">
-                    <p style="font-size:13px; color:var(--text-light); line-height:1.8;">
+                <div style="background:var(--bg); border-radius:12px; padding:18px; margin-top:8px;">
+                    <p style="font-size:12.5px; color:var(--text-light); line-height:1.8;">
                         <strong style="color:var(--primary);">평가 기준 가중치:</strong><br>
                         역할 전문화 25% · 프로세스 정비 25% · 재정 관리 30% · 비용 효율 20%<br><br>
                         <strong style="color:var(--accent);">핵심 해석:</strong> 
-                        겨레얼의 최우선 과제인 <strong>재정 투명성 확보</strong>에서 다우오피스가 압도적 우위를 보이며, 
-                        전자결재·경비정산·법인카드 관리가 기본 내장된 유일한 솔루션입니다.
+                        다우오피스는 <strong>재정 관리</strong>에서 압도적 우위. KT BizOffice는 <strong>프로세스 정비(PMS·업무일지)</strong>에서 
+                        최고점이며, 보안 인증과 고객 지원이 가장 높습니다.
                     </p>
                 </div>
             </div>
@@ -1550,77 +1068,81 @@
     <div class="container">
         <div class="section-header fade-in">
             <div class="section-num">6</div>
-            <h2 class="section-title">최종 추천 — 왜 다우오피스인가</h2>
+            <h2 class="section-title">최종 추천 — 4사 비교 결론</h2>
         </div>
 
         <div class="recommend-box fade-in">
             <h3>🏆 1순위 추천: <span style="color:var(--accent-light);">다우오피스 서비스형 스탠다드</span></h3>
             <div class="recommend-content">
-                <p style="font-size:16px; color:rgba(255,255,255,0.8); line-height:1.8; max-width:700px;">
-                    겨레얼의 4대 과제(역할 전문화, 프로세스 정비, 재정 투명성, 비용 효율)를 
-                    <strong style="color:white;">단일 플랫폼에서 모두 해결</strong>할 수 있는 유일한 솔루션입니다. 
-                    특히 보조금 사업을 운영하는 비영리 조직에 필수적인 경비정산·전자결재·예산 관리가 
-                    기본 내장되어 있습니다.
+                <p style="font-size:15px; color:rgba(255,255,255,0.8); line-height:1.8; max-width:700px;">
+                    겨레얼의 4대 과제를 <strong style="color:white;">단일 플랫폼에서 모두 해결</strong>할 수 있는 유일한 솔루션입니다.
                 </p>
-
                 <div class="recommend-reasons">
                     <div class="reason-item">
                         <h4>① 올인원 구조</h4>
-                        <p>메일 + 전자결재 + 메신저 + 일정 + 게시판 + 경비정산 + 근태관리가 
-                        하나의 플랫폼에서 제공됩니다. 별도 도구를 여러 개 운영할 필요가 없어 
-                        소규모 조직에 최적입니다.</p>
+                        <p>메일 + 전자결재 + 메신저 + 경비정산 + 근태관리가 하나의 플랫폼에 통합.</p>
                     </div>
                     <div class="reason-item">
                         <h4>② 재정 투명성</h4>
-                        <p>법인카드 연동, 실시간 계좌조회, 지출결의·정산 워크플로우가 내장되어 
-                        보조금 기관 감사에 즉시 대응할 수 있는 데이터 기반을 제공합니다.</p>
+                        <p>법인카드 연동, 실시간 계좌조회, 지출결의 워크플로우가 내장.</p>
                     </div>
                     <div class="reason-item">
                         <h4>③ 최저 비용</h4>
-                        <p>10인 기준 월 40,000원(첫해 할인 시 20,000원)으로 그룹웨어 전체 기능을 
-                        사용할 수 있어 비영리 조직의 제한된 예산에 부합합니다.</p>
+                        <p>10인 기준 첫해 월 20,000원. 비영리의 제한된 예산에 최적.</p>
                     </div>
                     <div class="reason-item">
                         <h4>④ 성장 확장성</h4>
-                        <p>인원이 늘어나면 서비스형에서 엔터프라이즈형으로 전환하여 ERP/HR 연동까지 
-                        확장 가능합니다. 5인 이하일 때는 무료로 시작할 수도 있습니다.</p>
+                        <p>5인 무료 → 서비스형 → 엔터프라이즈형 단계적 확장 가능.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px;" class="fade-in">
+        <div class="rank-grid fade-in">
             <div class="card">
-                <h4 style="font-size:16px; color:var(--hiworks); margin-bottom:12px;">🥈 2순위: 하이웍스</h4>
-                <p style="font-size:14px; color:var(--text-light); line-height:1.8;">
-                    메일 기능이 매우 강력하며(무제한 용량, AI 요약/번역, 암호메일), 
-                    그룹웨어 기능도 충실합니다. 다만 경비정산·법인카드 관리는 별도 HR 상품 추가가 필요하여 
-                    비용이 상승합니다. <strong style="color:var(--text);">외부 파트너와의 메일 커뮤니케이션이 많은 경우</strong> 고려할 수 있습니다.
+                <h4 style="font-size:16px; color:var(--kt); margin-bottom:12px;">🥈 2순위: KT BizOffice</h4>
+                <p style="font-size:13.5px; color:var(--text-light); line-height:1.8;">
+                    <strong style="color:var(--text);">기능 완성도가 가장 높은 풀패키지.</strong> 
+                    PMS, 업무일지, 전자계약, Teams 연동, ISO 보안 인증 6종 보유. 
+                    전담 세팅/교육 무상 지원은 IT 인력 부족한 비영리에 큰 장점. 
+                    <strong style="color:var(--text);">프로모션 할인 협의가 관건.</strong>
                 </p>
             </div>
             <div class="card">
-                <h4 style="font-size:16px; color:var(--jandi); margin-bottom:12px;">🥉 3순위: 잔디 (JANDI)</h4>
-                <p style="font-size:14px; color:var(--text-light); line-height:1.8;">
-                    메신저·협업 기능은 우수하나, 메일·전자결재·경비정산 기능이 없어 
-                    <strong style="color:var(--text);">그룹웨어 단독 도입은 부적합</strong>합니다. 
-                    비영리 50% 할인과 테크숩 지원은 큰 장점이므로, 
-                    다우오피스 도입 후 <strong style="color:var(--text);">보조 메신저로 병행 사용</strong>을 검토할 수 있습니다.
+                <h4 style="font-size:16px; color:var(--hiworks); margin-bottom:12px;">🥉 3순위: 하이웍스</h4>
+                <p style="font-size:13.5px; color:var(--text-light); line-height:1.8;">
+                    메일 기능 최강(무제한·AI·암호메일). 경비정산은 별도 HR 필요. 
+                    <strong style="color:var(--text);">외부 메일 커뮤니케이션이 많은 경우</strong> 고려 가능.
                 </p>
             </div>
+            <div class="card">
+                <h4 style="font-size:16px; color:var(--jandi); margin-bottom:12px;">4위: 잔디 (JANDI)</h4>
+                <p style="font-size:13.5px; color:var(--text-light); line-height:1.8;">
+                    메일·결재·경비 없어 <strong style="color:var(--text);">그룹웨어 단독 부적합.</strong> 
+                    그룹웨어 도입 후 보조 메신저로 병행 검토 가능.
+                </p>
+            </div>
+        </div>
+
+        <div class="callout fade-in" style="margin-top:30px; border-left-color: var(--kt);">
+            <strong style="color:var(--kt);">KT BizOffice 벤더 PT 확인 사항:</strong> 
+            ① 프로모션 할인율 (실질 단가) ② 무증빙 경비서비스 출시 일정 
+            ③ 10인 소규모 최소 과금 단위 ④ 비영리 특별 요금 가능 여부
+            → 충족 시 <strong style="color:var(--kt);">1순위 역전 가능</strong>
         </div>
     </div>
 </section>
 
 <hr class="divider">
 
-<!-- ===== 7. 로드맵 ===== -->
+<!-- ===== 7. 즉시 실행 사항 (로드맵) ===== -->
 <section class="section" id="roadmap">
     <div class="container">
         <div class="section-header fade-in">
             <div class="section-num">7</div>
-            <h2 class="section-title">도입 로드맵 — 4월~7월 (14주)</h2>
+            <h2 class="section-title">즉시 실행 사항</h2>
             <p class="section-desc">
-                킥오프(4월 9일)부터 안정화 완료 선언(7월 15일)까지 7단계 추진 계획입니다.
+                프로젝트 킥오프(4/14)부터 전사 시스템 오픈(5/18)까지 약 5주간의 실행 계획입니다.
             </p>
         </div>
 
@@ -1630,65 +1152,52 @@
             <div class="roadmap-item">
                 <div class="roadmap-dot">1</div>
                 <div class="roadmap-content">
-                    <h4>준비 단계</h4>
-                    <div class="roadmap-date">2026.04.09 ~ 04.17</div>
-                    <p>킥오프 미팅(4/9) → 부서별 요구사항 수집(4/13~17) → 벤더 RFP 발송(4/21)</p>
+                    <h4>프로젝트 킥오프 미팅 개최 <span class="roadmap-badge badge-who">담당: 전 구성원</span></h4>
+                    <div class="roadmap-date">4 / 14 (월)</div>
+                    <p>그룹웨어 도입 프로젝트 공식 시작. 전 구성원 대상 도입 목적·일정·기대효과 공유 및 협조 요청.</p>
                 </div>
             </div>
 
             <div class="roadmap-item">
                 <div class="roadmap-dot">2</div>
                 <div class="roadmap-content">
-                    <h4>벤더 선정</h4>
-                    <div class="roadmap-date">2026.04.29 ~ 05.01</div>
-                    <p>벤더 제안 PT 심사(4/29) → 최종 벤더 선정(5/1) → 계약 내부 승인</p>
+                    <h4>부서별 요구사항 수집 <span class="roadmap-badge badge-who">담당: 각 팀장</span></h4>
+                    <div class="roadmap-date">4 / 14 ~ 4 / 17</div>
+                    <p>각 팀장이 소속 부서의 업무 특성, 필요 기능, 현재 불편 사항 등을 취합하여 정리합니다.</p>
                 </div>
             </div>
 
             <div class="roadmap-item">
                 <div class="roadmap-dot">3</div>
                 <div class="roadmap-content">
-                    <h4>시스템 구축</h4>
-                    <div class="roadmap-date">2026.05.07 ~ 05.22</div>
-                    <p>서버 환경 세팅 → 계정·권한 설정 → 데이터 마이그레이션 준비</p>
+                    <h4>RFP (제안요청서) 발송 <span class="roadmap-badge badge-who">담당: 실무 담당자</span></h4>
+                    <div class="roadmap-date">4 / 20 (일)</div>
+                    <p>다우오피스·하이웍스·KT BizOffice·잔디 4사에 제안요청서 발송. 요구사항 수집 결과를 기반으로 평가 기준 포함.</p>
                 </div>
             </div>
 
             <div class="roadmap-item">
                 <div class="roadmap-dot">4</div>
                 <div class="roadmap-content">
-                    <h4>교육</h4>
-                    <div class="roadmap-date">2026.05.26 ~ 05.28</div>
-                    <p>관리자 사전 교육(5/26) → 전 직원 사용자 교육(5/27~28)</p>
+                    <h4>업체 심사 및 최종 선정 <span class="roadmap-badge badge-who">담당: 선정위원회</span></h4>
+                    <div class="roadmap-date">5 / 01 (목)</div>
+                    <p>벤더 제안 PT 심사 → 본 브리핑 자료의 적합도 평가 기준 적용 → 최종 벤더 선정 및 계약 내부 승인.</p>
                 </div>
             </div>
 
             <div class="roadmap-item">
-                <div class="roadmap-dot">5</div>
-                <div class="roadmap-content">
-                    <h4>파일럿 운영</h4>
-                    <div class="roadmap-date">2026.06.01 ~ 06.12</div>
-                    <p>파일럿 오픈(6/1) → 피드백 수집 및 보완 → 피드백 취합 회의(6/12)</p>
-                </div>
-            </div>
-
-            <div class="roadmap-item">
-                <div class="roadmap-dot" style="border-color: var(--success); color: var(--success);">6</div>
+                <div class="roadmap-dot" style="border-color: var(--success); color: var(--success); font-size:12px;">GO</div>
                 <div class="roadmap-content" style="border-color: var(--success); border-width: 2px;">
-                    <h4 style="color: var(--success);">★ 전사 오픈</h4>
-                    <div class="roadmap-date" style="color: var(--success);">2026.06.15 (D-Day)</div>
-                    <p>전사 오픈 → 헬프데스크 운영 시작 → 안정화 모니터링 돌입</p>
+                    <h4 style="color: var(--success);">★ 전사 시스템 오픈 <span class="roadmap-badge" style="background:rgba(46,204,113,0.15); color:var(--success);">담당: 전 구성원</span></h4>
+                    <div class="roadmap-date" style="color: var(--success); font-size:15px;">5 / 18 (월) — D-Day</div>
+                    <p>시스템 구축·데이터 이관·사용자 교육 완료 후 전사 오픈. 헬프데스크 운영 시작 및 안정화 모니터링 돌입.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="roadmap-item">
-                <div class="roadmap-dot">7</div>
-                <div class="roadmap-content">
-                    <h4>안정화</h4>
-                    <div class="roadmap-date">2026.06.16 ~ 07.15</div>
-                    <p>주간 점검 회의(매주 화, 4회) → 이슈 해결 및 보완 → 안정화 완료 선언(7/15)</p>
-                </div>
-            </div>
+        <div class="callout fade-in" style="margin-top: 20px; border-left-color: var(--primary);">
+            <strong style="color:var(--primary);">핵심 마일스톤:</strong> 
+            킥오프(4/14) → RFP 발송(4/20) → <strong>최종 선정(5/1)</strong> → <strong style="color:var(--success);">전사 오픈(5/18)</strong>
         </div>
     </div>
 </section>
@@ -1722,7 +1231,7 @@
             <div class="metric-card">
                 <div class="metric-value">100%</div>
                 <div class="metric-label">예산 투명성</div>
-                <div class="metric-detail">부분 공유 → 실시간 전체 공유</div>
+                <div class="metric-detail">부분 공유 → 실시간 전체</div>
             </div>
         </div>
 
@@ -1761,54 +1270,40 @@
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
-        <p><strong>(사)겨레얼살리기국민운동본부</strong> | 그룹웨어 도입 브리핑 자료</p>
+        <p><strong>(사)겨레얼살리기국민운동본부</strong> | 그룹웨어 도입 브리핑 자료 (4사 비교 Updated)</p>
         <p style="margin-top:8px;">© 2026 겨레얼살리기국민운동본부 · 기획·운영 담당 작성</p>
         <p style="margin-top:4px; font-size:11px;">본 자료는 내부 의사결정용이며, 최종 비용은 벤더 PT 후 확정됩니다.</p>
     </div>
 </footer>
 
-<!-- ===== SCROLL ANIMATION ===== -->
+<!-- ===== SCRIPTS ===== -->
 <script>
-    // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Smooth scroll for nav
     document.querySelectorAll('.nav-inner a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            // Update active
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             document.querySelectorAll('.nav-inner a').forEach(a => a.classList.remove('active'));
             this.classList.add('active');
         });
     });
 
-    // Update nav on scroll
     const sections = document.querySelectorAll('.section');
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (pageYOffset >= sectionTop) {
-                current = section.getAttribute('id');
-            }
+            if (pageYOffset >= section.offsetTop - 100) current = section.getAttribute('id');
         });
         document.querySelectorAll('.nav-inner a').forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
+            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
         });
     });
 </script>
