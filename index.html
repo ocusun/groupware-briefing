@@ -782,8 +782,20 @@
 </div>
 
 <script>
-const ob=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});
-document.querySelectorAll('.fade-up').forEach(el=>ob.observe(el));
+// 수정
+const ob = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      ob.unobserve(e.target); // 한 번 발동 후 해제 (성능 개선)
+    }
+  });
+}, {
+  threshold: 0,               // 1px만 보여도 즉시 발동
+  rootMargin: '0px 0px -60px 0px'  // 화면 하단 60px 여유 (너무 일찍 발동 방지)
+});
+
+document.querySelectorAll('.fade-up').forEach(el => ob.observe(el));
 
 // nav active
 const sections=document.querySelectorAll('section, .hero');
