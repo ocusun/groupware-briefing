@@ -196,7 +196,7 @@
   .callout p,.callout li{font-size:.85rem;color:var(--text-light)}
 
   /* FOOTER */
-  footer{text-align:center;padding:40px 20px;color:var(--text-light);font-size:.78rem;border-top:1px solid #e0e0e0;margin-top:40px}
+  footer{text-align:center;padding:40px 20px;color:var(--text-light);font-size:.78rem;border-top:1px solid #e0e0e0;margin-top:0}
 
   /* RESPONSIVE */
   @media(max-width:768px){
@@ -209,7 +209,67 @@
   /* ANIMATION */
   .fade-up{opacity:0;transform:translateY(30px);transition:all .6s ease}
   .fade-up.visible{opacity:1;transform:translateY(0)}
-
+/* CLOSING VIDEO SECTION */
+  .closing-section{
+    background:linear-gradient(135deg,#0d1b4a 0%,#1a237e 55%,#283593 100%);
+    padding:100px 20px 110px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .closing-deco{
+    position:absolute;border-radius:50%;
+    pointer-events:none;
+  }
+  .closing-deco-l{width:480px;height:480px;left:-160px;top:-140px;background:rgba(255,255,255,.04)}
+  .closing-deco-r{width:360px;height:360px;right:-100px;bottom:-120px;background:rgba(255,109,0,.06)}
+  .closing-inner{max-width:640px;margin:0 auto;position:relative;z-index:1}
+  .closing-eyebrow{
+    display:inline-block;
+    background:rgba(255,109,0,.9);
+    color:#fff;font-size:.72rem;font-weight:700;
+    letter-spacing:2px;padding:5px 20px;
+    border-radius:30px;margin-bottom:24px;
+  }
+  .closing-title{
+    font-size:clamp(1.8rem,4vw,2.8rem);
+    font-weight:900;color:#fff;
+    line-height:1.25;margin-bottom:16px;
+    letter-spacing:-.5px;
+  }
+  .closing-sub{
+    font-size:.97rem;color:rgba(255,255,255,.68);
+    line-height:2;margin-bottom:0;
+  }
+  .closing-divider{
+    width:48px;height:2px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-light));
+    margin:32px auto;border-radius:2px;
+  }
+  .closing-yt-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.1);
+    border:1.5px solid rgba(255,255,255,.22);
+    color:#fff;text-decoration:none;
+    font-size:1rem;font-weight:700;
+    padding:16px 32px;border-radius:50px;
+    transition:all .25s;
+    backdrop-filter:blur(8px);
+    letter-spacing:.2px;
+  }
+  .closing-yt-btn:hover{
+    background:rgba(255,109,0,.85);
+    border-color:rgba(255,109,0,.9);
+    transform:translateY(-3px);
+    box-shadow:0 12px 40px rgba(255,109,0,.35);
+  }
+  .closing-yt-icon{display:flex;align-items:center}
+  .closing-yt-arrow{font-size:1.1rem;opacity:.8}
+  .closing-yt-hint{
+    margin-top:14px;
+    font-size:.75rem;color:rgba(255,255,255,.35);
+    letter-spacing:.3px;
+  }
   /* ────────────────────────────────────────
      THREAD MODAL  (신규 추가)
   ──────────────────────────────────────── */
